@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<body>
+    {% for student in students %}
+    <h1 class="namegr">22ИСиП(Я){{students.group_id.name}}</h1>
+    <div class="ramka">
+        <ol class="list_students">
+            <li>{{ student.name }}<input type="checkbox" name="option1"></li>
+            <hr class="hli">
+        </ol>
+    </div>
+    {% endfor %}
+</body>
+{% endblock %}
