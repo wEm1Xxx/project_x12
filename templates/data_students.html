@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбранные студенты</title>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+</head>
+<body>
+
+
+    <header>
+        <a href="/index.html" class="out2"><p class="out">Выйти</p></a>
+    </header>
+    <div class="ramka">
+            <ol class="list_students">
+                <p class="namegr2">fgdfgdfgdfg</p>
+
+                <div> <div><div>Абайдулин Евгений
+                    <div class="checkselect">
+                  <label><input type="checkbox" name="brands[]" value="2"> Направление на
+                    практику</label>
+                  <label><input type="checkbox" name="brands[]" value="3"> Договор</label>
+                  <label><input type="checkbox" name="brands[]" value="4"> Лист инструктажа</label>
+                  <label><input type="checkbox" name="brands[]" value="5"> Дневник практики</label>
+                  <label><input type="checkbox" name="brands[]" value="6"> Отзыв руководителя
+                    от организации</label>
+                  <label><input type="checkbox" name="brands[]" value="6"> Аттестационный
+                    лист</label>
+                </div>
+                    <a class="zapolnit" href="/access/fill_data_students.html">Заполнить</a>
+                   <button><img  src="{{url_for('static', filename='img/material-symbols_delete-outline (4).svg')}}"></button>
+              </div>
+
+                <hr class="hli">
+
+
+                <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+                <script src="{{url_for('static', filename='js/js.js')}}" ></script>
+
+
+
+            </ol>
+
+    </div>
+    <a href="/access/data_students.html"><button class="gogo2">Сгенерировать документы</button></a>
+</body>
+{% endblock %}

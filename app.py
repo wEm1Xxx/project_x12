@@ -88,17 +88,33 @@ def vhod():
         else:
             return redirect('/logout')
 
-@application.route('/list_students/<int:id>', methods = ['POST', 'GET'])
+@application.route('/list_students/<int:id>', methods=['POST', 'GET'])
 @login_required
 def studenti(id):
-        title = "Студенты"
-        if current_user.role_id.id == 1:
-            students = StudentsController.get(id)
+    title = "Студенты"
+    if current_user.role_id.id == 1:
+        students = StudentsController.show_group(id)
+        group_name = students[0].group_id.name if students else "Группа не найдена"  # Берём название из первого студента
+        return render_template('list_students.html',
+                             title=title,
+                             students=students,
+                             group_name=group_name)
+    else:
+        return redirect('/logout')
 
-            return render_template('list_students.html',
-                                   title=title, students=students)
-        else:
-            return redirect('/logout')
+@application.route('/data-students', methods = ['POST', 'GET'])
+
+def data_students():
+        title = "Группы студентов"
+
+
+
+
+        return render_template('data_students.html',
+                                   title=title, )
+
+
+
 
 
 @application.route('/logout')

@@ -14,11 +14,6 @@ class StudentsController:
 
     @classmethod
     def show_group(cls, group_id):
-        # students=[]
-        # for student in cls.get():
-        #     if student.group_id==group_id:
-        #         students.append(student)
-        # return students
         return Students.select().where(Students.group_id == group_id)
 
     #CRUD

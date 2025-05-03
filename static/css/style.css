@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    list-style:none;
 }
 .name{
     position: relative;
@@ -159,9 +160,22 @@ header{
     top: 10px;
     right: 10px;
 }
+.ramka-1{
+    width: 870px;
+    border-radius: 7px;
+    border-style: solid; /* стиль рамки в виде сплошной линии */
+    border-width: 1px; /* толщина рамки */
+    border-color: #A8A8A8;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 50px;
+    display: table;
+}
+
 .ramka{
     width: 870px;
-    height: 1500px;
+    height:1400px;
     border-radius: 7px;
     border-style: solid; /* стиль рамки в виде сплошной линии */
     border-width: 1px; /* толщина рамки */
@@ -266,7 +280,6 @@ h2{
 ol{
     font-size: 30px;
     position: relative;
-    left: 50px;
 
 }
 .list_students li{
@@ -276,10 +289,9 @@ ol{
 input[type="checkbox"]{
     transform: scale(2);
     accent-color: #62A7DA;
-    position: absolute;
-    right: 0px;
-    left: 700px;
+    position: static;
     accent-color: #62A7DA;
+    margin-right:100px;
 
 }
 li{
@@ -296,7 +308,186 @@ hr{
 }
 .namegr{
     position: relative;
+
     left: 515px;
     top: 50px;
     color: #5D5C60;
 }
+.checkselect input[type="checkbox"]{
+    transform: scale(1.5);
+    accent-color: #62A7DA;
+
+    position: absolute;
+    right: 0px;
+    left: 240px;
+    top: 9px;
+
+    accent-color: #62A7DA;
+}
+
+
+.student-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.student-name {
+    flex-grow: 1; /* Занимает всё доступное пространство */
+}
+
+.student-checkbox {
+    margin-left: 10px; /* Отступ от текста */
+}
+
+.hvk{
+    position: relative;
+    top: 120px
+}
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 250px;
+    margin-top:80px;
+}
+a {
+    text-decoration: none;
+}
+.gogo{
+    position: relative;
+    top: 90px;
+    left: 1160px;
+    width: 230px;
+    height: 43px;
+    background-color: #62A7DA;
+    border: #62A7DA;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.out2{
+    color: #62A7DA;
+}
+.namegr2{
+    display: flex;
+    justify-content: center;
+    padding-right: 100px;
+    color: #5D5C60;
+    font-size: 50px;
+}
+.checkselect {
+	position: relative;
+	display: inline-block;
+	min-width: 200px;
+	text-align: left;
+}
+
+.checkselect-control select {
+	position: relative;
+	display: inline-block;
+	width: 300px;
+	margin: 0;
+	padding-left: 5px;
+	height: 42px;
+}
+.checkselect-over {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	cursor: pointer;
+}
+.checkselect-popup {
+	display: none;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	width: 300px;
+	height: auto;
+	max-height: 200px;
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	border: 1px solid #dadada;
+	border-top: none;
+	background: #fff;
+	z-index: 9999;
+	overflow: auto;
+	user-select: none;
+}
+.checkselect label {
+	position: relative;
+	display: block;
+	margin: 0;
+	padding: 4px 6px 4px 25px;
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 1.1;
+	cursor: pointer;
+}
+.checkselect-popup input {
+	position: absolute;
+	top: 5px;
+	left: 8px;
+	margin: 0 !important;
+	padding: 0;
+}
+.checkselect-popup label:hover {
+	background: #03a2ff;
+	color: #fff;
+}
+.checkselect-popup fieldset {
+	display: block;
+	margin:  0;
+	padding: 0;
+	border: none;
+}
+.checkselect-popup fieldset input {
+	left: 15px;
+}
+.checkselect-popup fieldset label {
+	padding-left: 32px;
+}
+.checkselect-popup legend {
+	display: block;
+	margin: 0;
+	padding: 5px 8px;
+	font-weight: 700;
+	font-size: 1em;
+	line-height: 1.1;
+}
+.checkselect{
+    position: relative;
+    left: 20px;
+    bottom: 7px;
+
+}
+
+
+.zapolnit{
+    position: relative;
+    left: 35px;
+    font-size: 30px;
+}
+img{
+    position: relative;
+    left: 60px;
+    top: 5px;
+}
+.gogo2{
+    position: relative;
+    top: 90px;
+    left: 1160px;
+    width: 230px;
+    height: 43px;
+    background-color: #62A7DA;
+    border: #62A7DA;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+}
+
