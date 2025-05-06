@@ -88,31 +88,50 @@ def vhod():
         else:
             return redirect('/logout')
 
-@application.route('/list_students/<int:id>', methods=['POST', 'GET'])
+@application.route('/list_students/<int:group_id>', methods=['POST', 'GET'])
 @login_required
-def studenti(id):
+def studenti(group_id):
     title = "Студенты"
     if current_user.role_id.id == 1:
-        students = StudentsController.show_group(id)
+        students = StudentsController.show_group(group_id)
+        group=GroupsController.show(group_id)
         group_name = students[0].group_id.name if students else "Группа не найдена"  # Берём название из первого студента
         return render_template('list_students.html',
                              title=title,
                              students=students,
-                             group_name=group_name)
+                             group_name=group_name,
+                            group=group
+                               )
     else:
         return redirect('/logout')
 
-@application.route('/data-students', methods = ['POST', 'GET'])
+@application.route('/data-students/<int:student_id>', methods = ['POST', 'GET'])
+def data_students(student_id):
+        title = "Выбор нужных документов"
+        if current_user.role_id.id == 1:
+            students = StudentsController.show(student_id)
+            # group_name = students[0].group_id.name if students else "Ошибка"
 
-def data_students():
-        title = "Группы студентов"
+            return render_template('data_students.html',
+                                    title=title,
 
+                                    students=students)
+        else:
+            return redirect('/logout')
 
+@application.route('/fill_data_students', methods = ['POST', 'GET'])
+def zapolnenie_dokumentov():
+    title = "Заполнение документов"
+    if current_user.role_id.id == 1:
 
+        # group_name = students[0].group_id.name if students else "Ошибка"
 
-        return render_template('data_students.html',
-                                   title=title, )
+        return render_template('fill_data_students.html',
+                               title=title,
 
+                               )
+    else:
+        return redirect('/logout')
 
 
 

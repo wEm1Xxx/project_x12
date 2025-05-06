@@ -16,11 +16,13 @@
     <header>
         <a href="/index.html" class="out2"><p class="out">Выйти</p></a>
     </header>
-    <div class="ramka">
+    <div class="ramka-1">
             <ol class="list_students">
-                <p class="namegr2">fgdfgdfgdfg</p>
+                <p class="namegr2">{{ group_name }}</p>
 
-                <div> <div><div>Абайдулин Евгений
+
+                <li>
+                   {{ students.surename }} {{ students.name }}
                     <div class="checkselect">
                   <label><input type="checkbox" name="brands[]" value="2"> Направление на
                     практику</label>
@@ -31,19 +33,17 @@
                     от организации</label>
                   <label><input type="checkbox" name="brands[]" value="6"> Аттестационный
                     лист</label>
-                </div>
-                    <a class="zapolnit" href="/access/fill_data_students.html">Заполнить</a>
-                   <button><img  src="{{url_for('static', filename='img/material-symbols_delete-outline (4).svg')}}"></button>
-              </div>
+                    </div>
+                    <a class="zapolnit" href="/fill_data_students">Заполнить</a>
+
+                       <a href=""><img  src="{{url_for('static', filename='img/material-symbols_delete-outline (4).svg')}}"></a>
+              </li>
 
                 <hr class="hli">
 
 
                 <script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
                 <script src="{{url_for('static', filename='js/js.js')}}" ></script>
-
-
-
             </ol>
 
     </div>

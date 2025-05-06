@@ -286,6 +286,7 @@ ol{
     margin-top: 20px;
 
 }
+
 input[type="checkbox"]{
     transform: scale(2);
     accent-color: #62A7DA;
@@ -294,6 +295,7 @@ input[type="checkbox"]{
     margin-right:100px;
 
 }
+
 li{
     color: #5D5C60;
 }
@@ -392,6 +394,7 @@ a {
 	margin: 0;
 	padding-left: 5px;
 	height: 42px;
+	right: 19px;
 }
 .checkselect-over {
 	position: absolute;
@@ -469,21 +472,18 @@ a {
 
 
 .zapolnit{
-    position: relative;
-    left: 35px;
-    font-size: 30px;
+    font-size: 25px;
 }
 img{
     position: relative;
-    left: 60px;
-    top: 5px;
+
 }
 .gogo2{
     position: relative;
     top: 90px;
     left: 1160px;
     width: 230px;
-    height: 43px;
+    height: 60px;
     background-color: #62A7DA;
     border: #62A7DA;
     border-radius: 10px;
@@ -491,3 +491,46 @@ img{
     font-size: 20px;
 }
 
+.hli2{
+    width: 820px;
+    position: relative;
+    left: 20px;
+    top: 10px;
+}
+.zzzz {
+    width: 200px;
+    height: 40px;
+    margin: 45px;
+    text-align: center;
+    border-radius: 10px;
+    border-color: #5D5C60;
+}
+p{
+    font-size: 25px;
+    color: #5D5C60;
+    position: relative;
+    top: 18px;
+    left: 20px;
+}
+.file{
+    width: 160px;
+    height: 35px;
+    background-color: white;
+    border-radius: 10px;
+    border-color: #A8A8A8;
+    color: #A8A8A8;
+    position: relative;
+    top: 60px;
+    left: 500px;
+}
+.sohra{
+    width: 160px;
+    height: 35px;
+    background-color: #62A7DA;
+    border-radius: 10px;
+    border-color: #62A7DA;
+    color: white;
+    position: relative;
+    top: 60px;
+    left: 530px;
+}
